@@ -401,7 +401,7 @@ Execute these rules based on the provided inputs and return the structured analy
 
 ## What Worked: The Successful Approach
 
-* **Agent Specialization**: Instead of one large, monolithic agent, separating tasks into a language expert (`TriageAgent`) and a business logic engine (`PrioritizationAgent`). This separation was key to achieving high accuracy and was a core requirement.
+* **Agent Specialization**: Instead of one large, single agent, separating tasks into a language expert (`TriageAgent`) and a business logic engine (`PrioritizationAgent`). This separation was key to achieving high accuracy and was a core requirement.
   
 * **Deterministic Logic for Final Routing**: Using a standard Python `if/elif/else` function (`route_decision_maker`) for the final routing decision removed all ambiguity from the most critical step.
   
