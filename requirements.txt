@@ -1,0 +1,4 @@
+pydantic-ai
+groq
+pydantic
+python-dotenv

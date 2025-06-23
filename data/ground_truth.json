@@ -1,0 +1,22 @@
+{
+    "SUP-001": {
+        "expected_queue": "Tier_1_Support",
+        "expected_category": "General Question"
+    },
+    "SUP-002": {
+        "expected_queue": "Tier_2_Technical",
+        "expected_category": "Bug"
+    },
+    "SUP-003": {
+        "expected_queue": "Product_Feedback",
+        "expected_category": "Feature Request"
+    },
+    "SUP-004": {
+        "expected_queue": "Tier_2_Technical",
+        "expected_category": "Bug"
+    },
+    "SUP-005": {
+        "expected_queue": "Security_Response_Team",
+        "expected_category": "Security Concern"
+    }
+}
