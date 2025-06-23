@@ -63,7 +63,7 @@ Subhankar-Panda---Customer-Support-Ticket-Analyzer/
 
 The system is designed with a clear separation of concerns, following a pipeline model where each component has a distinct, specialized role. This aligns with the case study's requirement to build a system with at least two specialized agents.
 
-![System Architecture Funnel]()
+![System Architecture Funnel](funnel_image.jpg)
 
 1.  **Triage Agent**
     * **Role**: Analyzes the raw, unstructured text of a support ticket (`subject` and `message`).
