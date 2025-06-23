@@ -53,14 +53,14 @@ The system is designed with a clear separation of concerns, following a pipeline
       
     * **Core Principle**: It operates on the "Knowledge vs. Malfunction" principle to differentiate between user questions and system failures, a rule defined in its system prompt.
 
-2.  **Prioritization Agent **
+2.  **Prioritization Agent**
     * **Role**: Assesses the business value and risk associated with the ticket.
       
     * **Task**: It takes structured data about the customer (e.g., tier, revenue) and the sentiment from the Triage Agent to calculate `business_impact` and `customer_risk`. It does *not* analyze the ticket text.
       
     * **Core Principle**: It acts as a deterministic "Executor," applying a fixed set of business rules defined in its prompt with no room for interpretation.
 
-3.  **Deterministic Router **
+3.  **Deterministic Router**
     * **Role**: This is a standard Python function (`route_decision_maker`), not an AI agent.
       
     * **Task**: It takes the structured outputs from both agents and applies a strict, hierarchical decision tree to determine the final `recommended_queue` and `priority`. This ensures the final routing decision is 100% predictable and auditable. The output is structured as `FinalRoute`.
