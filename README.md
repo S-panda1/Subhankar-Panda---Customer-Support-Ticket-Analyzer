@@ -41,12 +41,24 @@ python main.py <TICKET_ID>
 ```
 ## Codebase Structure
 
-* `main.py`: Entry point to run the analysis on a single ticket from the command line.
-* `evaluation.py`: The evaluation framework to test the system's accuracy and consistency against a ground truth dataset.
-* `system.py`: The core logic of the system. Contains the prompts for the AI agents, the agent definitions, and the final routing function.
-* `schemas.py`: Defines the Pydantic data models (`TriageAnalysis`, `PrioritizationAnalysis`, `FinalRoute`) that ensure structured and validated data flows between components.
-* `data/`: Contains `test_cases.json` and `ground_truth.json` for evaluation.
-
+```bash
+Subhankar-Panda---Customer-Support-Ticket-Analyzer/
+├── main.py             # Main script to run a single ticket
+├── evaluation.py       # Script to run evaluation on all test cases
+├── .env                # Environment variables
+├── .gitignore          # Specifies intentionally untracked files to ignore
+├── agents/
+│   ├── __init__.py
+│   ├── schemas.py      # Your Pydantic models
+│   └── system.py       # Code for agents and orchestrator
+├── docs/
+│   └── prompt_iterations.md # Document your prompt changes here
+├── data/
+│   ├── test_cases.json   # The 5 test cases
+│   └── ground_truth.txt  # Ground truth data
+├── ai_chat_history.txt # The full conversation with me (or another AI)
+└── README.md
+```
 ## System Architecture
 
 The system is designed with a clear separation of concerns, following a pipeline model where each component has a distinct, specialized role. This aligns with the case study's requirement to build a system with at least two specialized agents.
